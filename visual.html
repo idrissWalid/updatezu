@@ -81,7 +81,7 @@
         voteChart = new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: ['PNJ', 'IKSS', 'Bremzo', 'RCD', 'MeddyBest'],
+            labels: ['PGN', 'IKSS', 'Bremzo', 'RCD', 'MeddyBest'],
             datasets: [{
               label: 'Nombre de votes',
               data: chartData,
@@ -109,7 +109,7 @@
 
       const totalVotes = chartData.reduce((a, b) => a + b, 0);
       document.getElementById('total-votes').innerText = totalVotes;
-      document.getElementById('cand1').innerText = `PNJ : ${votes.Candidat1 || 0} votes (${totalVotes ? ((votes.Candidat1 || 0)/totalVotes*100).toFixed(2):0}%)`;
+      document.getElementById('cand1').innerText = `PGN : ${votes.Candidat1 || 0} votes (${totalVotes ? ((votes.Candidat1 || 0)/totalVotes*100).toFixed(2):0}%)`;
       document.getElementById('cand2').innerText = `IKSS : ${votes.Candidat2 || 0} votes (${totalVotes ? ((votes.Candidat2 || 0)/totalVotes*100).toFixed(2):0}%)`;
       document.getElementById('cand3').innerText = `Bremzo : ${votes.Candidat3 || 0} votes (${totalVotes ? ((votes.Candidat3 || 0)/totalVotes*100).toFixed(2):0}%)`;
       document.getElementById('cand4').innerText = `RCD : ${votes.Candidat4 || 0} votes (${totalVotes ? ((votes.Candidat4 || 0)/totalVotes*100).toFixed(2):0}%)`;
@@ -139,4 +139,5 @@
   </script>
 </body>
 </html>
+
 
