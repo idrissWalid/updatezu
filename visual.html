@@ -109,11 +109,11 @@
 
       const totalVotes = chartData.reduce((a, b) => a + b, 0);
       document.getElementById('total-votes').innerText = totalVotes;
-      document.getElementById('cand1').innerText = `PGN : ${votes.Candidat1 || 0} votes (${totalVotes ? ((votes.Candidat1 || 0)/totalVotes*100).toFixed(2):0}%)`;
-      document.getElementById('cand2').innerText = `IKSS : ${votes.Candidat2 || 0} votes (${totalVotes ? ((votes.Candidat2 || 0)/totalVotes*100).toFixed(2):0}%)`;
-      document.getElementById('cand3').innerText = `Bremzo : ${votes.Candidat3 || 0} votes (${totalVotes ? ((votes.Candidat3 || 0)/totalVotes*100).toFixed(2):0}%)`;
-      document.getElementById('cand4').innerText = `RCD : ${votes.Candidat4 || 0} votes (${totalVotes ? ((votes.Candidat4 || 0)/totalVotes*100).toFixed(2):0}%)`;
-      document.getElementById('cand5').innerText = `MeddyBest : ${votes.Candidat5 || 0} votes (${totalVotes ? ((votes.Candidat5 || 0)/totalVotes*100).toFixed(2):0}%)`;
+      document.getElementById('cand1').innerText = `PGN : ${totalVotes ? ((votes.Candidat1 || 0)/totalVotes*100).toFixed(2):0}%`;
+      document.getElementById('cand2').innerText = `IKSS : ${totalVotes ? ((votes.Candidat2 || 0)/totalVotes*100).toFixed(2):0}%`;
+      document.getElementById('cand3').innerText = `Bremzo : ${totalVotes ? ((votes.Candidat3 || 0)/totalVotes*100).toFixed(2):0}%`;
+      document.getElementById('cand4').innerText = `RCD : ${totalVotes ? ((votes.Candidat4 || 0)/totalVotes*100).toFixed(2):0}%)`;
+      document.getElementById('cand5').innerText = `MeddyBest : ${totalVotes ? ((votes.Candidat5 || 0)/totalVotes*100).toFixed(2):0}%`;
     }
 
     document.getElementById('refreshBtn').onclick = updateChart;
@@ -139,5 +139,6 @@
   </script>
 </body>
 </html>
+
 
 
